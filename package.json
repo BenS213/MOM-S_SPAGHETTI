@@ -1,0 +1,26 @@
+{
+  "name": "spanish_flashcard_app",
+  "version": "1.0.0",
+  "description": "An application for users to create flashcards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenS213/SPANISH_FLASHCARD_APP.git"
+  },
+  "keywords": [
+    "flashcard",
+    "spanish"
+  ],
+  "author": "Benjamin Schoenbachler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenS213/SPANISH_FLASHCARD_APP/issues"
+  },
+  "homepage": "https://github.com/BenS213/SPANISH_FLASHCARD_APP#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
