@@ -1,5 +1,5 @@
 {
-  "name": "spanish_flashcard_app",
+  "name": "MOM'S SPAGHETTI",
   "version": "1.0.0",
   "description": "An application for users to create flashcards",
   "main": "index.js",
@@ -8,18 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenS213/SPANISH_FLASHCARD_APP.git"
+    "url": "git+https://github.com/BenS213/MOM-S_SPAGHETTI.git"
   },
-  "keywords": [
-    "flashcard",
-    "spanish"
-  ],
+
   "author": "Benjamin Schoenbachler",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BenS213/SPANISH_FLASHCARD_APP/issues"
+    "url": "https://github.com/BenS213/MOM-S_SPAGHETTI/issues"
   },
-  "homepage": "https://github.com/BenS213/SPANISH_FLASHCARD_APP#readme",
+  "homepage": "https://github.com/BenS213/MOM-S_SPAGHETTI#readme",
   "dependencies": {
     "concurrently": "^7.6.0"
   }

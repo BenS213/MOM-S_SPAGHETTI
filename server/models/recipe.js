@@ -5,8 +5,9 @@ const recipeSchema = new Schema({
     ingredients: [String],
     author: String,
     description: String,
-    instructions: String,
+    instructions: [String],
 });
 
-const Recipe = model('Recipe', recipeSchema);
-module.export(Recipe);
+const RecipeModel = model('Recipe', recipeSchema);
+
+export default RecipeModel;

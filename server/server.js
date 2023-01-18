@@ -1,16 +1,23 @@
-const { application } = require("express");
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const Recipe = require('./models/recipe');
+// const { application } = require("express");
+import express from "express"
+import cors from "cors"
+import mongoose from "mongoose"
+// import Recipe from "./models/recipe"
+import dotenv from 'dotenv'
+dotenv.config()
 
-require("dotenv").config();
+// require("dotenv").config();
+
+console.log(process.env)
 
 mongoose
   .connect(
-    `mongodb+srv://BenS213:${process.env.MONGODB_PASS}@cluster0.d0omwyo.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://Ben:${process.env.MONGODB_PASS}@cluster0.kxyzip4.mongodb.net/?retryWrites=true&w=majority`
   )
-  .then(() => console.log("Connected!"));
+  .then(() => {
+    console.log(`Listening on port ${PORT}!`);
+    app.listen(PORT);
+  });
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -22,13 +29,11 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-app.listen(PORT);
+// const recipe = new Recipe({
+//   title: "test description",
+//   description: "test description",
+//   ingredients: ["orange", "lime"],
+//   instructions: "test instructions",
+// });
 
-const recipe = new Recipe({
-    title: 'test description',
-    description: "test description",
-    ingredients: ["orange", "lime"],
-    instructions: 'test instructions',
-})
-
-recipe.save();
+// recipe.save();
