@@ -1,8 +1,9 @@
 {
-  "name": "MOM'S SPAGHETTI",
+  "name": "MOM-S_SPAGHETTI",
   "version": "1.0.0",
   "description": "An application for users to create flashcards",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
