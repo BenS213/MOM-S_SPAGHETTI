@@ -9,8 +9,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("hello world");
@@ -24,6 +24,11 @@ app.post("/recipes", async (req, res) => {
   res.json(createdRecipe)
 });
 
+app.get("/recipes", async (req, res) => {
+  const recipes = await Recipe.find();
+  res.json(recipes)
+});
+
 mongoose
   .connect(
     `mongodb+srv://Ben:${process.env.MONGODB_PASS}@cluster0.kxyzip4.mongodb.net/?retryWrites=true&w=majority`
@@ -32,12 +37,3 @@ mongoose
     console.log(`Listening on port ${PORT}!`);
     app.listen(PORT);
   });
-
-// const recipe = new Recipe({
-//   title: "test description",
-//   description: "test description",
-//   ingredients: ["orange", "lime"],
-//   instructions: "test instructions",
-// });
-
-// recipe.save();
